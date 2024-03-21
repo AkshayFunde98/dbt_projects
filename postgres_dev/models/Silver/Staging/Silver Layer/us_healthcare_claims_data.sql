@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', schema='silver') }}
  
 with source_data as (
  
@@ -17,11 +17,12 @@ with source_data as (
         	ELSE NULL 
     	END AS diagnosis_3,
 	allowed_amount::varchar AS allowed_amount,
-        paid_amount::varchar AS paid_amount,
-	date(enrolled_date) as enrolled_date,
-	date(claimed_date) as claimed_date,
-	date(paid_date) as paid_date,
-	date(created_date) as created_date
+    paid_amount::varchar AS paid_amount,
+	enrolled_date,
+	claimed_date,
+	paid_date,
+	created_date
+	
 	from {{ source('bootcamp_project','us_healthcare_claims') }}
  
 )

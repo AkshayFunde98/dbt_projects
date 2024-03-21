@@ -32,9 +32,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   postgres_dev:
-    +schema: staging
-    +enabled: true
-    +materialized: table
-
+    example:
+      +materialized: view
 
 
