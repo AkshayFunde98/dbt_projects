@@ -7,7 +7,7 @@ with us_healthcare_claims_data AS (
 dates_data AS (
     SELECT
         DISTINCT DATE(dates) as date_key,
-        EXTRACT(DAY FROM dates) as day,
+        EXTRACT(DAY FROM dates) as day_of_month,
         EXTRACT(MONTH FROM dates) as month,
         EXTRACT(YEAR FROM dates) as year,
         EXTRACT(QUARTER FROM dates) as quarter,

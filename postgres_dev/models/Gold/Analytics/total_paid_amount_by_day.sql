@@ -1,18 +1,32 @@
 {{ config(materialized='table', schema='gold') }}
 
-WITH source_data AS (
-    SELECT 
-	EXTRACT(DAY FROM paid_date_key) AS paid_by_day,
-        sum(paid_amount) AS total_paid_amount
+WITH source_data AS ( 
+    SELECT * 
     FROM 
-        {{ ref('fact_claims') }}
+         {{ ref('fact_claims') }}
+), 
+dim_day AS (
+    SELECT
+        date_key,
+        day_of_month
+    FROM
+        {{ ref('dim_date') }}
+),
+calculate AS (
+    SELECT 
+        d.day_of_month AS paid_by_day,
+        SUM(sd.paid_amount) AS total_paid_amount
+    FROM 
+        source_data sd
+    LEFT JOIN
+        dim_day d ON sd.paid_date_key = d.date_key
     WHERE
-	paid_date_key IS NOT NULL AND paid_amount IS NOT NULL
+        sd.paid_date_key IS NOT NULL AND sd.paid_amount IS NOT NULL
     GROUP BY 
-	paid_date_key 
+        d.day_of_month 
     ORDER BY
-	paid_date_key 
+        d.day_of_month 
 )
  
 SELECT *
-FROM source_data
+FROM calculate
