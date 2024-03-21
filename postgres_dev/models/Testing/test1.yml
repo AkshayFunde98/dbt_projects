@@ -163,9 +163,27 @@ models:
               field: gender
 
   - name: dim_date
-    description: TTable storing date-related attributes.
+    description: Table storing date-related attributes.
     columns:
       - name: date_key
         description: Unique identifier representing individual dates
         test:
           - date
+
+  - name: total_allowed_amount
+    description: Total amounts allowed by an insurer for settling claims for defined groups of claims
+    columns:
+      - name: total_allowed_amount
+        description: Amount in USD
+        test:
+          - relationships:
+              to: ref('fact_claims')
+
+  - name: total_paid_amount
+    description: Total amount paid by an insurer for settling claims for defined groups of claims
+    columns:
+      - name: total_paid_amount
+        description: Amount in USD
+        tests:
+          - relationships:
+              to: ref('fact_claims')
