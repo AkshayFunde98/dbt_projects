@@ -1,6 +1,12 @@
 {{ config(materialized='table', schema = 'silver') }}
 
-with facts AS (
+with us_healthcare_claims_data AS (
+  SELECT *
+  FROM
+    {{ ref('us_healthcare_claims_data') }}
+
+),
+ fact_claims AS (
 SELECT
   claim_id,
   member_id as member_key,
@@ -14,8 +20,8 @@ SELECT
   date(paid_date) as paid_date_key
 
 FROM
-  {{ ref('us_healthcare_claims_data') }}
+  us_healthcare_claims_data
 )
 
 SELECT * 
-FROM facts
+FROM fact_claims

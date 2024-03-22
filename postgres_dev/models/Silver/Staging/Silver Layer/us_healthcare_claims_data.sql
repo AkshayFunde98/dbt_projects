@@ -1,6 +1,11 @@
 {{ config(materialized='table', schema='silver') }}
  
-with source_data as (
+with us_healthcare_claims AS (
+	SELECT *
+	FROM 
+		{{ source('bootcamp_project','us_healthcare_claims') }}
+),
+source_data AS (
  
     select claim as claim_id, member_id, name, address, email, 
 	case when gender NOT IN ('Male', 'Female') then 'Others' else gender end as gender,
@@ -23,8 +28,8 @@ with source_data as (
 	paid_date,
 	created_date
 	
-	from {{ source('bootcamp_project','us_healthcare_claims') }}
- 
+	from 
+		us_healthcare_claims
 )
  
 select *

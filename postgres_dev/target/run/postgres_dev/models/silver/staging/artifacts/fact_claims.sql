@@ -10,7 +10,13 @@
   (
     
 
-with facts AS (
+with us_healthcare_claims_data AS (
+  SELECT *
+  FROM
+    "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+
+),
+ fact_claims AS (
 SELECT
   claim_id,
   member_id as member_key,
@@ -24,10 +30,10 @@ SELECT
   date(paid_date) as paid_date_key
 
 FROM
-  "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+  us_healthcare_claims_data
 )
 
 SELECT * 
-FROM facts
+FROM fact_claims
   );
   

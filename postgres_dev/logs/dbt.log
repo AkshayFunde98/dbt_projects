@@ -44959,3 +44959,1840 @@ with relation as (
 [0m12:55:19.783847 [info ] [MainThread]: Running with dbt=1.7.10
 [0m12:55:19.783847 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\bootcamp_project\\postgres_dev\\logs', 'profiles_dir': 'C:\\Users\\Akshay.Funde\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
 [0m12:55:19.927658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '31a2216c-f92f-4bea-82a4-e6b103bbc060', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC0B57AB50>]}
+[0m12:55:19.981239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '31a2216c-f92f-4bea-82a4-e6b103bbc060', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC0B035950>]}
+[0m13:09:42.785656 [error] [MainThread]: Encountered an error:
+
+[0m13:09:42.806011 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 169, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 245, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 324, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\serve.py", line 28, in run
+    httpd.serve_forever()
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Akshay.Funde\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m13:09:42.813042 [debug] [MainThread]: Command `dbt docs serve` failed at 13:09:42.813042 after 863.08 seconds
+[0m13:09:42.826537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC04ABF850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC0B541490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC0B541A10>]}
+[0m13:09:42.829090 [debug] [MainThread]: Flushing usage events
+[0m13:09:55.295815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB7F40790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB7F51650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB7F506D0>]}
+
+
+============================== 13:09:55.295815 | fdf04172-6cb5-4bfb-b62f-f73c6eb1e741 ==============================
+[0m13:09:55.295815 [info ] [MainThread]: Running with dbt=1.7.10
+[0m13:09:55.295815 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Akshay.Funde\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\bootcamp_project\\postgres_dev\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True'}
+[0m13:09:55.365301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fdf04172-6cb5-4bfb-b62f-f73c6eb1e741', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB7FBCC50>]}
+[0m13:09:55.390161 [debug] [MainThread]: Command `dbt clean` succeeded at 13:09:55.389164 after 0.13 seconds
+[0m13:09:55.390161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB7F9FE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB7F9FF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026AB125E390>]}
+[0m13:09:55.390161 [debug] [MainThread]: Flushing usage events
+[0m13:10:01.264501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A42437E850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A423E75890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A42436F810>]}
+
+
+============================== 13:10:01.264501 | 62183342-2323-4346-8bb4-42f18644cc53 ==============================
+[0m13:10:01.264501 [info ] [MainThread]: Running with dbt=1.7.10
+[0m13:10:01.264501 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'D:\\bootcamp_project\\postgres_dev\\logs', 'profiles_dir': 'C:\\Users\\Akshay.Funde\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:10:01.338960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '62183342-2323-4346-8bb4-42f18644cc53', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4240986D0>]}
+[0m13:10:01.341980 [debug] [MainThread]: Set downloads directory='C:\Users\AKSHAY~1.FUN\AppData\Local\Temp\dbt-downloads-ipsbkdya'
+[0m13:10:01.342680 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:10:01.906300 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:10:01.908296 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:10:02.418966 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:10:02.444544 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m13:10:03.193507 [info ] [MainThread]: Installed from version 1.1.1
+[0m13:10:03.193507 [info ] [MainThread]: Up to date!
+[0m13:10:03.193507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '62183342-2323-4346-8bb4-42f18644cc53', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A42437C610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A424476C90>]}
+[0m13:10:03.193507 [debug] [MainThread]: Command `dbt deps` succeeded at 13:10:03.193507 after 1.97 seconds
+[0m13:10:03.193507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A423FD3150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4243D8250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A41D94C550>]}
+[0m13:10:03.193507 [debug] [MainThread]: Flushing usage events
+[0m13:10:29.097927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9B25510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9B5CCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9B1EE50>]}
+
+
+============================== 13:10:29.113592 | 7c557d0f-b9ba-4b50-9681-6abfa3f1ecee ==============================
+[0m13:10:29.113592 [info ] [MainThread]: Running with dbt=1.7.10
+[0m13:10:29.113592 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Akshay.Funde\\.dbt', 'log_path': 'D:\\bootcamp_project\\postgres_dev\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:10:29.225040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9B5D290>]}
+[0m13:10:29.285773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B84841D0>]}
+[0m13:10:29.285773 [info ] [MainThread]: Registered adapter: postgres=1.7.10
+[0m13:10:29.296244 [debug] [MainThread]: checksum: b88efa780424265bbbd676e971356ada6a7ea9debd0a80a519a6d2707465340d, vars: {}, profile: , target: , version: 1.7.10
+[0m13:10:29.296244 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:10:29.304314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9D8D310>]}
+[0m13:10:30.277877 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.postgres_dev.example
+[0m13:10:30.279963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9F63610>]}
+[0m13:10:30.298060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA367E90>]}
+[0m13:10:30.298060 [info ] [MainThread]: Found 11 models, 31 tests, 2 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+[0m13:10:30.298060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9E54C50>]}
+[0m13:10:30.298060 [info ] [MainThread]: 
+[0m13:10:30.298060 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:10:30.309378 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project'
+[0m13:10:30.309378 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project"
+[0m13:10:30.309378 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project'
+[0m13:10:30.309378 [debug] [ThreadPool]: On list_bootcamp_project: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:10:30.309378 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project"
+[0m13:10:30.309378 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:30.309378 [debug] [ThreadPool]: On list_bootcamp_project: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:10:30.309378 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:30.342612 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:10:30.342612 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:10:30.342612 [debug] [ThreadPool]: On list_bootcamp_project: Close
+[0m13:10:30.342612 [debug] [ThreadPool]: On list_bootcamp_project: Close
+[0m13:10:30.342612 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project_public_silver'
+[0m13:10:30.342612 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project_public_gold'
+[0m13:10:30.342612 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_silver"
+[0m13:10:30.342612 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_gold"
+[0m13:10:30.358340 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: BEGIN
+[0m13:10:30.358340 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: BEGIN
+[0m13:10:30.359426 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:30.359426 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:10:30.374953 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.376096 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_gold"
+[0m13:10:30.376096 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project_public_gold"} */
+select
+      'bootcamp_project' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bootcamp_project' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bootcamp_project' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m13:10:30.376096 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.0 seconds
+[0m13:10:30.376096 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: ROLLBACK
+[0m13:10:30.376096 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: Close
+[0m13:10:30.376096 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.376096 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_silver"
+[0m13:10:30.376096 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project_public_silver"} */
+select
+      'bootcamp_project' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bootcamp_project' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bootcamp_project' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m13:10:30.392468 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:10:30.392468 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: ROLLBACK
+[0m13:10:30.392468 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: Close
+[0m13:10:30.398482 [debug] [MainThread]: Using postgres connection "master"
+[0m13:10:30.398482 [debug] [MainThread]: On master: BEGIN
+[0m13:10:30.398482 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:10:30.435371 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.435371 [debug] [MainThread]: Using postgres connection "master"
+[0m13:10:30.436490 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:10:30.440383 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:10:30.441492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA359550>]}
+[0m13:10:30.441492 [debug] [MainThread]: On master: ROLLBACK
+[0m13:10:30.442461 [debug] [MainThread]: Using postgres connection "master"
+[0m13:10:30.442461 [debug] [MainThread]: On master: BEGIN
+[0m13:10:30.442461 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.442461 [debug] [MainThread]: On master: COMMIT
+[0m13:10:30.442461 [debug] [MainThread]: Using postgres connection "master"
+[0m13:10:30.442461 [debug] [MainThread]: On master: COMMIT
+[0m13:10:30.442461 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.442461 [debug] [MainThread]: On master: Close
+[0m13:10:30.442461 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:10:30.442461 [info ] [MainThread]: 
+[0m13:10:30.442461 [debug] [Thread-1 (]: Began running node model.postgres_dev.icd_codes_data
+[0m13:10:30.442461 [debug] [Thread-2 (]: Began running node model.postgres_dev.us_healthcare_claims_data
+[0m13:10:30.442461 [info ] [Thread-1 (]: 1 of 11 START sql table model public_silver.icd_codes_data ..................... [RUN]
+[0m13:10:30.442461 [info ] [Thread-2 (]: 2 of 11 START sql table model public_silver.us_healthcare_claims_data .......... [RUN]
+[0m13:10:30.442461 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.postgres_dev.icd_codes_data'
+[0m13:10:30.455684 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.postgres_dev.us_healthcare_claims_data'
+[0m13:10:30.455684 [debug] [Thread-1 (]: Began compiling node model.postgres_dev.icd_codes_data
+[0m13:10:30.456689 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.us_healthcare_claims_data
+[0m13:10:30.458406 [debug] [Thread-1 (]: Writing injected SQL for node "model.postgres_dev.icd_codes_data"
+[0m13:10:30.458406 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.458406 [debug] [Thread-2 (]: Timing info for model.postgres_dev.us_healthcare_claims_data (compile): 13:10:30.458406 => 13:10:30.458406
+[0m13:10:30.458406 [debug] [Thread-1 (]: Timing info for model.postgres_dev.icd_codes_data (compile): 13:10:30.456689 => 13:10:30.458406
+[0m13:10:30.458406 [debug] [Thread-2 (]: Began executing node model.postgres_dev.us_healthcare_claims_data
+[0m13:10:30.458406 [debug] [Thread-1 (]: Began executing node model.postgres_dev.icd_codes_data
+[0m13:10:30.498749 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.498749 [debug] [Thread-1 (]: Writing runtime sql for node "model.postgres_dev.icd_codes_data"
+[0m13:10:30.498749 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.498749 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:10:30.498749 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: BEGIN
+[0m13:10:30.498749 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: BEGIN
+[0m13:10:30.498749 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:10:30.498749 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:10:30.509637 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.509637 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.509637 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+ 
+with us_healthcare_claims AS (
+	SELECT *
+	FROM 
+		"bootcamp_project"."public"."us_healthcare_claims"
+),
+source_data AS (
+ 
+    select claim as claim_id, member_id, name, address, email, 
+	case when gender NOT IN ('Male', 'Female') then 'Others' else gender end as gender,
+	date(date_of_birth) AS date_of_birth,
+	COALESCE(diagnosis_1, diagnosis_2, diagnosis_3) AS diagnosis_1,
+    	CASE 
+        	WHEN diagnosis_1 IS NOT NULL THEN COALESCE(diagnosis_2, diagnosis_3)
+        	ELSE CASE WHEN diagnosis_2 IS NOT NULL THEN diagnosis_3
+            		ELSE NULL 
+        		END 
+    	END AS diagnosis_2,
+    	CASE 
+        	WHEN diagnosis_1 IS NOT NULL AND diagnosis_2 IS NOT NULL THEN diagnosis_3
+        	ELSE NULL 
+    	END AS diagnosis_3,
+	allowed_amount::varchar AS allowed_amount,
+    paid_amount::varchar AS paid_amount,
+	enrolled_date,
+	claimed_date,
+	paid_date,
+	created_date
+	
+	from 
+		us_healthcare_claims
+)
+ 
+select *
+from source_data
+  );
+  
+[0m13:10:30.525859 [debug] [Thread-2 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:10:30.525859 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.525859 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_silver"."us_healthcare_claims_data" rename to "us_healthcare_claims_data__dbt_backup"
+[0m13:10:30.525859 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.525859 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.525859 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:10:30.525859 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.541709 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."icd_codes_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with source_data as (
+ 
+    select category_code, diagnosis_code, full_code, full_description, category_title
+	from "bootcamp_project"."public"."icd_codes"
+ 
+)
+ 
+select *
+from source_data
+  );
+  
+[0m13:10:30.541709 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_tmp" rename to "us_healthcare_claims_data"
+[0m13:10:30.543712 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.556829 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: COMMIT
+[0m13:10:30.556829 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.557778 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: COMMIT
+[0m13:10:30.574996 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.574996 [debug] [Thread-2 (]: Applying DROP to: "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_backup"
+[0m13:10:30.590630 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:10:30.590630 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+drop table if exists "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_backup" cascade
+[0m13:10:30.614823 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:10:30.616918 [debug] [Thread-2 (]: Timing info for model.postgres_dev.us_healthcare_claims_data (execute): 13:10:30.458406 => 13:10:30.616327
+[0m13:10:30.617461 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: Close
+[0m13:10:30.618527 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA2FCA10>]}
+[0m13:10:30.619061 [info ] [Thread-2 (]: 2 of 11 OK created sql table model public_silver.us_healthcare_claims_data ..... [[32mSELECT 1000[0m in 0.16s]
+[0m13:10:30.620661 [debug] [Thread-2 (]: Finished running node model.postgres_dev.us_healthcare_claims_data
+[0m13:10:30.621726 [debug] [Thread-4 (]: Began running node model.postgres_dev.dim_date
+[0m13:10:30.622255 [debug] [Thread-3 (]: Began running node model.postgres_dev.dim_member
+[0m13:10:30.622255 [debug] [Thread-2 (]: Began running node model.postgres_dev.fact_claims
+[0m13:10:30.622791 [info ] [Thread-4 (]: 3 of 11 START sql table model public_silver.dim_date ........................... [RUN]
+[0m13:10:30.623316 [info ] [Thread-3 (]: 4 of 11 START sql table model public_silver.dim_member ......................... [RUN]
+[0m13:10:30.624902 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.postgres_dev.dim_date'
+[0m13:10:30.623843 [info ] [Thread-2 (]: 5 of 11 START sql table model public_silver.fact_claims ........................ [RUN]
+[0m13:10:30.625680 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.postgres_dev.dim_member'
+[0m13:10:30.626796 [debug] [Thread-4 (]: Began compiling node model.postgres_dev.dim_date
+[0m13:10:30.627906 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.postgres_dev.us_healthcare_claims_data, now model.postgres_dev.fact_claims)
+[0m13:10:30.628622 [debug] [Thread-3 (]: Began compiling node model.postgres_dev.dim_member
+[0m13:10:30.632252 [debug] [Thread-4 (]: Writing injected SQL for node "model.postgres_dev.dim_date"
+[0m13:10:30.632252 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.fact_claims
+[0m13:10:30.632252 [debug] [Thread-3 (]: Writing injected SQL for node "model.postgres_dev.dim_member"
+[0m13:10:30.632252 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.fact_claims"
+[0m13:10:30.641719 [debug] [Thread-4 (]: Timing info for model.postgres_dev.dim_date (compile): 13:10:30.628622 => 13:10:30.632252
+[0m13:10:30.642712 [debug] [Thread-3 (]: Timing info for model.postgres_dev.dim_member (compile): 13:10:30.632252 => 13:10:30.641719
+[0m13:10:30.643712 [debug] [Thread-4 (]: Began executing node model.postgres_dev.dim_date
+[0m13:10:30.643712 [debug] [Thread-2 (]: Timing info for model.postgres_dev.fact_claims (compile): 13:10:30.632252 => 13:10:30.643712
+[0m13:10:30.644712 [debug] [Thread-3 (]: Began executing node model.postgres_dev.dim_member
+[0m13:10:30.646580 [debug] [Thread-4 (]: Writing runtime sql for node "model.postgres_dev.dim_date"
+[0m13:10:30.646580 [debug] [Thread-2 (]: Began executing node model.postgres_dev.fact_claims
+[0m13:10:30.646580 [debug] [Thread-3 (]: Writing runtime sql for node "model.postgres_dev.dim_member"
+[0m13:10:30.658205 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.fact_claims"
+[0m13:10:30.659217 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:10:30.660207 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: BEGIN
+[0m13:10:30.661205 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:10:30.662205 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:10:30.662205 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:10:30.663885 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: BEGIN
+[0m13:10:30.663885 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: BEGIN
+[0m13:10:30.663885 [debug] [Thread-1 (]: SQL status: SELECT 71704 in 0.0 seconds
+[0m13:10:30.665395 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:10:30.665395 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:10:30.665395 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:10:30.665395 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+alter table "bootcamp_project"."public_silver"."icd_codes_data" rename to "icd_codes_data__dbt_backup"
+[0m13:10:30.665395 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.675936 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:10:30.675936 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+alter table "bootcamp_project"."public_silver"."icd_codes_data__dbt_tmp" rename to "icd_codes_data"
+[0m13:10:30.677358 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.677358 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: COMMIT
+[0m13:10:30.677358 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:10:30.677358 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: COMMIT
+[0m13:10:30.677358 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.677358 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:10:30.677358 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."dim_member__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with us_healthcare_claims_data AS (
+  Select * 
+  FROM
+  "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+),
+member_details AS (
+  SELECT
+    DISTINCT member_id AS member_key,
+    name,
+    address,
+    email,
+    gender
+  FROM
+    us_healthcare_claims_data
+)
+
+SELECT *
+FROM member_details
+  );
+  
+[0m13:10:30.677358 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.677358 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:10:30.677358 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."dim_date__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with us_healthcare_claims_data AS (
+    SELECT * 
+    FROM "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+),
+dates_data AS (
+    SELECT
+        DISTINCT DATE(dates) as date_key,
+        EXTRACT(DAY FROM dates) as day_of_month,
+        EXTRACT(MONTH FROM dates) as month,
+        EXTRACT(YEAR FROM dates) as year,
+        EXTRACT(QUARTER FROM dates) as quarter,
+        EXTRACT(DOW FROM dates) as day_of_week,
+        EXTRACT(DOY FROM dates) as day_of_year,
+        EXTRACT(WEEK FROM dates) as week_of_year,
+        CASE WHEN EXTRACT(ISODOW FROM dates) IN (6, 7) THEN 1 ELSE 0 END as is_weekend
+    FROM (
+        SELECT enrolled_date as dates FROM us_healthcare_claims_data 
+        UNION
+        SELECT claimed_date as dates FROM us_healthcare_claims_data 
+        UNION
+        SELECT paid_date as dates FROM us_healthcare_claims_data 
+        UNION
+        SELECT created_date as dates FROM us_healthcare_claims_data 
+    ) AS all_dates
+    ORDER BY date_key
+)
+
+SELECT * 
+FROM dates_data
+  );
+  
+[0m13:10:30.677358 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.691605 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:10:30.691605 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.fact_claims"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."fact_claims__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with us_healthcare_claims_data AS (
+  SELECT *
+  FROM
+    "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+
+),
+ fact_claims AS (
+SELECT
+  claim_id,
+  member_id as member_key,
+  diagnosis_1 as diagnosis_1_key,
+  diagnosis_2 as diagnosis_2_key,
+  diagnosis_3 as diagnosis_3_key,
+  CAST(REGEXP_REPLACE(allowed_amount, '[$,]', '', 'g') AS numeric) AS allowed_amount,
+  CAST(REGEXP_REPLACE(paid_amount, '[$,]', '', 'g') AS numeric) AS paid_amount,
+  date(enrolled_date) as enrolled_date_key, 
+  date(claimed_date) as claimed_date_key,
+  date(paid_date) as paid_date_key
+
+FROM
+  us_healthcare_claims_data
+)
+
+SELECT * 
+FROM facfact_claimsts
+  );
+  
+[0m13:10:30.693616 [debug] [Thread-2 (]: Postgres adapter: Postgres error: relation "facfact_claimsts" does not exist
+LINE 38: FROM facfact_claimsts
+              ^
+
+[0m13:10:30.693616 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: ROLLBACK
+[0m13:10:30.693616 [debug] [Thread-2 (]: Timing info for model.postgres_dev.fact_claims (execute): 13:10:30.646580 => 13:10:30.693616
+[0m13:10:30.693616 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: Close
+[0m13:10:30.699126 [debug] [Thread-2 (]: Database Error in model fact_claims (models\silver\staging\artifacts\fact_claims.sql)
+  relation "facfact_claimsts" does not exist
+  LINE 38: FROM facfact_claimsts
+                ^
+  compiled Code at target\run\postgres_dev\models\silver\staging\artifacts\fact_claims.sql
+[0m13:10:30.699126 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA369190>]}
+[0m13:10:30.699126 [error] [Thread-2 (]: 5 of 11 ERROR creating sql table model public_silver.fact_claims ............... [[31mERROR[0m in 0.07s]
+[0m13:10:30.699126 [debug] [Thread-2 (]: Finished running node model.postgres_dev.fact_claims
+[0m13:10:30.699126 [debug] [Thread-2 (]: Began running node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:10:30.699126 [info ] [Thread-2 (]: 6 of 11 START sql table model public_gold.final_us_healthcare_claims_data ...... [RUN]
+[0m13:10:30.699126 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.postgres_dev.fact_claims, now model.postgres_dev.final_us_healthcare_claims_data)
+[0m13:10:30.699126 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:10:30.708177 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.709189 [debug] [Thread-2 (]: Timing info for model.postgres_dev.final_us_healthcare_claims_data (compile): 13:10:30.699126 => 13:10:30.708177
+[0m13:10:30.709189 [debug] [Thread-2 (]: Began executing node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:10:30.714182 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.714749 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.714749 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: BEGIN
+[0m13:10:30.714749 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:10:30.714749 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.714749 [debug] [Thread-1 (]: Applying DROP to: "bootcamp_project"."public_silver"."icd_codes_data__dbt_backup"
+[0m13:10:30.714749 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:10:30.714749 [debug] [Thread-3 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:10:30.724880 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+drop table if exists "bootcamp_project"."public_silver"."icd_codes_data__dbt_backup" cascade
+[0m13:10:30.727553 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:10:30.727553 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+alter table "bootcamp_project"."public_silver"."dim_member" rename to "dim_member__dbt_backup"
+[0m13:10:30.727553 [debug] [Thread-4 (]: SQL status: SELECT 118 in 0.0 seconds
+[0m13:10:30.727553 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:10:30.727553 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.727553 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.727553 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+alter table "bootcamp_project"."public_silver"."dim_date" rename to "dim_date__dbt_backup"
+[0m13:10:30.737816 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:10:30.737816 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:10:30.737816 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.737816 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+alter table "bootcamp_project"."public_silver"."dim_member__dbt_tmp" rename to "dim_member"
+[0m13:10:30.741545 [debug] [Thread-1 (]: Timing info for model.postgres_dev.icd_codes_data (execute): 13:10:30.498749 => 13:10:30.741545
+[0m13:10:30.743155 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.743155 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+ 
+with source_data as (
+ 
+    select
+	claim_id, member_id, name, address, email, 
+	gender,
+	date(date_of_birth) AS date_of_birth,
+	diagnosis_1,
+    diagnosis_2,
+    diagnosis_3,
+	allowed_amount,
+    paid_amount,
+	date(enrolled_date) as enrolled_date,
+	date(claimed_date) as claimed_date,
+	date(paid_date) as paid_date,
+	date(created_date) as created_date
+	
+from "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+ 
+)
+ 
+select *
+from source_data
+  );
+  
+[0m13:10:30.743888 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: Close
+[0m13:10:30.743888 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:10:30.743888 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.743888 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA3AD550>]}
+[0m13:10:30.743888 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+alter table "bootcamp_project"."public_silver"."dim_date__dbt_tmp" rename to "dim_date"
+[0m13:10:30.743888 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: COMMIT
+[0m13:10:30.743888 [info ] [Thread-1 (]: 1 of 11 OK created sql table model public_silver.icd_codes_data ................ [[32mSELECT 71704[0m in 0.30s]
+[0m13:10:30.743888 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:10:30.743888 [debug] [Thread-1 (]: Finished running node model.postgres_dev.icd_codes_data
+[0m13:10:30.743888 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.743888 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: COMMIT
+[0m13:10:30.743888 [debug] [Thread-1 (]: Began running node model.postgres_dev.total_allowed_amount
+[0m13:10:30.743888 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: COMMIT
+[0m13:10:30.743888 [debug] [Thread-2 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:10:30.758216 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:10:30.743888 [info ] [Thread-1 (]: 7 of 11 SKIP relation public_gold.total_allowed_amount ......................... [[33mSKIP[0m]
+[0m13:10:30.762219 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.762640 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: COMMIT
+[0m13:10:30.762640 [debug] [Thread-1 (]: Finished running node model.postgres_dev.total_allowed_amount
+[0m13:10:30.762640 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_gold"."final_us_healthcare_claims_data" rename to "final_us_healthcare_claims_data__dbt_backup"
+[0m13:10:30.762640 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.762640 [debug] [Thread-1 (]: Began running node model.postgres_dev.total_paid_amount
+[0m13:10:30.762640 [debug] [Thread-3 (]: Applying DROP to: "bootcamp_project"."public_silver"."dim_member__dbt_backup"
+[0m13:10:30.762640 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.762640 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.762640 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:10:30.762640 [info ] [Thread-1 (]: 8 of 11 SKIP relation public_gold.total_paid_amount ............................ [[33mSKIP[0m]
+[0m13:10:30.762640 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.774876 [debug] [Thread-4 (]: Applying DROP to: "bootcamp_project"."public_silver"."dim_date__dbt_backup"
+[0m13:10:30.775889 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+drop table if exists "bootcamp_project"."public_silver"."dim_member__dbt_backup" cascade
+[0m13:10:30.775889 [debug] [Thread-1 (]: Finished running node model.postgres_dev.total_paid_amount
+[0m13:10:30.776877 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_tmp" rename to "final_us_healthcare_claims_data"
+[0m13:10:30.777875 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:10:30.778875 [debug] [Thread-1 (]: Began running node model.postgres_dev.dim_diagnosis
+[0m13:10:30.780827 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+drop table if exists "bootcamp_project"."public_silver"."dim_date__dbt_backup" cascade
+[0m13:10:30.780827 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.780827 [info ] [Thread-1 (]: 9 of 11 START sql table model public_silver.dim_diagnosis ...................... [RUN]
+[0m13:10:30.780827 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: COMMIT
+[0m13:10:30.780827 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:10:30.780827 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.postgres_dev.icd_codes_data, now model.postgres_dev.dim_diagnosis)
+[0m13:10:30.780827 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:10:30.780827 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.780827 [debug] [Thread-3 (]: Timing info for model.postgres_dev.dim_member (execute): 13:10:30.646580 => 13:10:30.780827
+[0m13:10:30.780827 [debug] [Thread-1 (]: Began compiling node model.postgres_dev.dim_diagnosis
+[0m13:10:30.780827 [debug] [Thread-4 (]: Timing info for model.postgres_dev.dim_date (execute): 13:10:30.644712 => 13:10:30.780827
+[0m13:10:30.791567 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: COMMIT
+[0m13:10:30.791567 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: Close
+[0m13:10:30.794565 [debug] [Thread-1 (]: Writing injected SQL for node "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.795565 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: Close
+[0m13:10:30.799097 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA2A4750>]}
+[0m13:10:30.799097 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA17BC90>]}
+[0m13:10:30.799097 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.799097 [info ] [Thread-3 (]: 4 of 11 OK created sql table model public_silver.dim_member .................... [[32mSELECT 1000[0m in 0.17s]
+[0m13:10:30.799097 [debug] [Thread-1 (]: Timing info for model.postgres_dev.dim_diagnosis (compile): 13:10:30.792566 => 13:10:30.799097
+[0m13:10:30.799097 [debug] [Thread-2 (]: Applying DROP to: "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_backup"
+[0m13:10:30.799097 [info ] [Thread-4 (]: 3 of 11 OK created sql table model public_silver.dim_date ...................... [[32mSELECT 118[0m in 0.17s]
+[0m13:10:30.799097 [debug] [Thread-3 (]: Finished running node model.postgres_dev.dim_member
+[0m13:10:30.799097 [debug] [Thread-1 (]: Began executing node model.postgres_dev.dim_diagnosis
+[0m13:10:30.808158 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:10:30.809178 [debug] [Thread-4 (]: Finished running node model.postgres_dev.dim_date
+[0m13:10:30.812938 [debug] [Thread-1 (]: Writing runtime sql for node "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.812938 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+drop table if exists "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_backup" cascade
+[0m13:10:30.812938 [debug] [Thread-3 (]: Began running node model.postgres_dev.total_paid_amount_by_day
+[0m13:10:30.812938 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.812938 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: BEGIN
+[0m13:10:30.812938 [info ] [Thread-3 (]: 10 of 11 SKIP relation public_gold.total_paid_amount_by_day .................... [[33mSKIP[0m]
+[0m13:10:30.812938 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:10:30.812938 [debug] [Thread-3 (]: Finished running node model.postgres_dev.total_paid_amount_by_day
+[0m13:10:30.812938 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:10:30.812938 [debug] [Thread-2 (]: Timing info for model.postgres_dev.final_us_healthcare_claims_data (execute): 13:10:30.710174 => 13:10:30.812938
+[0m13:10:30.812938 [debug] [Thread-2 (]: On model.postgres_dev.final_us_healthcare_claims_data: Close
+[0m13:10:30.812938 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA4AEDD0>]}
+[0m13:10:30.812938 [info ] [Thread-2 (]: 6 of 11 OK created sql table model public_gold.final_us_healthcare_claims_data . [[32mSELECT 1000[0m in 0.11s]
+[0m13:10:30.825868 [debug] [Thread-2 (]: Finished running node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:10:30.829966 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:30.829966 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.829966 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."dim_diagnosis__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/dim_diagnosis.sql
+
+
+
+WITH icd_codes AS (
+  select *
+  from "bootcamp_project"."public_silver"."icd_codes_data"
+)
+
+SELECT
+  full_code AS diagnosis_key,
+  category_code,
+  diagnosis_code,
+  full_description,
+  category_title
+FROM
+  icd_codes
+  );
+  
+[0m13:10:30.977951 [debug] [Thread-1 (]: SQL status: SELECT 71704 in 0.0 seconds
+[0m13:10:30.977951 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.977951 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+alter table "bootcamp_project"."public_silver"."dim_diagnosis" rename to "dim_diagnosis__dbt_backup"
+[0m13:10:30.977951 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.977951 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.977951 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+alter table "bootcamp_project"."public_silver"."dim_diagnosis__dbt_tmp" rename to "dim_diagnosis"
+[0m13:10:30.977951 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:10:30.977951 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: COMMIT
+[0m13:10:30.977951 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.977951 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: COMMIT
+[0m13:10:30.994479 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:30.994479 [debug] [Thread-1 (]: Applying DROP to: "bootcamp_project"."public_silver"."dim_diagnosis__dbt_backup"
+[0m13:10:30.994479 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:10:30.994479 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+drop table if exists "bootcamp_project"."public_silver"."dim_diagnosis__dbt_backup" cascade
+[0m13:10:30.999486 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:10:30.999486 [debug] [Thread-1 (]: Timing info for model.postgres_dev.dim_diagnosis (execute): 13:10:30.810157 => 13:10:30.999486
+[0m13:10:30.999486 [debug] [Thread-1 (]: On model.postgres_dev.dim_diagnosis: Close
+[0m13:10:30.999486 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7c557d0f-b9ba-4b50-9681-6abfa3f1ecee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA4CBB50>]}
+[0m13:10:30.999486 [info ] [Thread-1 (]: 9 of 11 OK created sql table model public_silver.dim_diagnosis ................. [[32mSELECT 71704[0m in 0.22s]
+[0m13:10:30.999486 [debug] [Thread-1 (]: Finished running node model.postgres_dev.dim_diagnosis
+[0m13:10:31.008259 [debug] [Thread-4 (]: Began running node model.postgres_dev.diagnosis_frequency
+[0m13:10:31.010254 [info ] [Thread-4 (]: 11 of 11 SKIP relation public_gold.diagnosis_frequency ......................... [[33mSKIP[0m]
+[0m13:10:31.010254 [debug] [Thread-4 (]: Finished running node model.postgres_dev.diagnosis_frequency
+[0m13:10:31.012311 [debug] [MainThread]: Using postgres connection "master"
+[0m13:10:31.012311 [debug] [MainThread]: On master: BEGIN
+[0m13:10:31.012311 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:10:31.036484 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:10:31.037508 [debug] [MainThread]: On master: COMMIT
+[0m13:10:31.037508 [debug] [MainThread]: Using postgres connection "master"
+[0m13:10:31.037508 [debug] [MainThread]: On master: COMMIT
+[0m13:10:31.038485 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:10:31.038485 [debug] [MainThread]: On master: Close
+[0m13:10:31.039484 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:10:31.039484 [debug] [MainThread]: Connection 'list_bootcamp_project' was properly closed.
+[0m13:10:31.040486 [debug] [MainThread]: Connection 'list_bootcamp_project' was properly closed.
+[0m13:10:31.040486 [debug] [MainThread]: Connection 'list_bootcamp_project_public_silver' was properly closed.
+[0m13:10:31.040486 [debug] [MainThread]: Connection 'list_bootcamp_project_public_gold' was properly closed.
+[0m13:10:31.040486 [debug] [MainThread]: Connection 'model.postgres_dev.dim_diagnosis' was properly closed.
+[0m13:10:31.041485 [debug] [MainThread]: Connection 'model.postgres_dev.final_us_healthcare_claims_data' was properly closed.
+[0m13:10:31.041485 [debug] [MainThread]: Connection 'model.postgres_dev.dim_date' was properly closed.
+[0m13:10:31.041485 [debug] [MainThread]: Connection 'model.postgres_dev.dim_member' was properly closed.
+[0m13:10:31.042485 [info ] [MainThread]: 
+[0m13:10:31.043489 [info ] [MainThread]: Finished running 11 table models in 0 hours 0 minutes and 0.74 seconds (0.74s).
+[0m13:10:31.045486 [debug] [MainThread]: Command end result
+[0m13:10:31.060390 [info ] [MainThread]: 
+[0m13:10:31.062390 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m13:10:31.062390 [info ] [MainThread]: 
+[0m13:10:31.063885 [error] [MainThread]:   Database Error in model fact_claims (models\silver\staging\artifacts\fact_claims.sql)
+  relation "facfact_claimsts" does not exist
+  LINE 38: FROM facfact_claimsts
+                ^
+  compiled Code at target\run\postgres_dev\models\silver\staging\artifacts\fact_claims.sql
+[0m13:10:31.063885 [info ] [MainThread]: 
+[0m13:10:31.063885 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=1 SKIP=4 TOTAL=11
+[0m13:10:31.063885 [debug] [MainThread]: Command `dbt run` failed at 13:10:31.063885 after 2.00 seconds
+[0m13:10:31.063885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9773150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240BA1FFE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000240B9EEA410>]}
+[0m13:10:31.063885 [debug] [MainThread]: Flushing usage events
+[0m13:11:22.622606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C96DF0C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C968B5950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C942F18D0>]}
+
+
+============================== 13:11:22.625728 | 527ba48a-d06b-4d6b-a2f4-423983c5bcec ==============================
+[0m13:11:22.625728 [info ] [MainThread]: Running with dbt=1.7.10
+[0m13:11:22.626729 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\bootcamp_project\\postgres_dev\\logs', 'profiles_dir': 'C:\\Users\\Akshay.Funde\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:11:22.755899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C96F0A410>]}
+[0m13:11:22.810656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C96EC72D0>]}
+[0m13:11:22.811640 [info ] [MainThread]: Registered adapter: postgres=1.7.10
+[0m13:11:22.819657 [debug] [MainThread]: checksum: b88efa780424265bbbd676e971356ada6a7ea9debd0a80a519a6d2707465340d, vars: {}, profile: , target: , version: 1.7.10
+[0m13:11:22.878602 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:11:22.879604 [debug] [MainThread]: Partial parsing: updated file: postgres_dev://models\silver\staging\artifacts\fact_claims.sql
+[0m13:11:23.075853 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.postgres_dev.example
+[0m13:11:23.080852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C974EF990>]}
+[0m13:11:23.091233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C97586CD0>]}
+[0m13:11:23.092080 [info ] [MainThread]: Found 11 models, 31 tests, 2 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+[0m13:11:23.093089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C973553D0>]}
+[0m13:11:23.095215 [info ] [MainThread]: 
+[0m13:11:23.095215 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:11:23.095215 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project'
+[0m13:11:23.095215 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project'
+[0m13:11:23.107979 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project"
+[0m13:11:23.110046 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project"
+[0m13:11:23.111565 [debug] [ThreadPool]: On list_bootcamp_project: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:11:23.111565 [debug] [ThreadPool]: On list_bootcamp_project: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:11:23.111565 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:11:23.111565 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:11:23.129212 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:11:23.129212 [debug] [ThreadPool]: On list_bootcamp_project: Close
+[0m13:11:23.129212 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:11:23.140342 [debug] [ThreadPool]: On list_bootcamp_project: Close
+[0m13:11:23.143346 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project_public_gold'
+[0m13:11:23.145343 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bootcamp_project_public_silver'
+[0m13:11:23.147716 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_gold"
+[0m13:11:23.147716 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_silver"
+[0m13:11:23.147716 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: BEGIN
+[0m13:11:23.147716 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: BEGIN
+[0m13:11:23.147716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:11:23.147716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:11:23.190250 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.190250 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.191255 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_silver"
+[0m13:11:23.191255 [debug] [ThreadPool]: Using postgres connection "list_bootcamp_project_public_gold"
+[0m13:11:23.192250 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project_public_silver"} */
+select
+      'bootcamp_project' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bootcamp_project' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'bootcamp_project' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m13:11:23.193252 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "list_bootcamp_project_public_gold"} */
+select
+      'bootcamp_project' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bootcamp_project' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'bootcamp_project' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m13:11:23.197252 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.0 seconds
+[0m13:11:23.197252 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:11:23.198252 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: ROLLBACK
+[0m13:11:23.199268 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: ROLLBACK
+[0m13:11:23.201249 [debug] [ThreadPool]: On list_bootcamp_project_public_silver: Close
+[0m13:11:23.201249 [debug] [ThreadPool]: On list_bootcamp_project_public_gold: Close
+[0m13:11:23.210263 [debug] [MainThread]: Using postgres connection "master"
+[0m13:11:23.211263 [debug] [MainThread]: On master: BEGIN
+[0m13:11:23.211263 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:11:23.230878 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.231881 [debug] [MainThread]: Using postgres connection "master"
+[0m13:11:23.231881 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:11:23.235879 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:11:23.236880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C97329BD0>]}
+[0m13:11:23.237881 [debug] [MainThread]: On master: ROLLBACK
+[0m13:11:23.238879 [debug] [MainThread]: Using postgres connection "master"
+[0m13:11:23.238879 [debug] [MainThread]: On master: BEGIN
+[0m13:11:23.240322 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.240322 [debug] [MainThread]: On master: COMMIT
+[0m13:11:23.240322 [debug] [MainThread]: Using postgres connection "master"
+[0m13:11:23.240322 [debug] [MainThread]: On master: COMMIT
+[0m13:11:23.240322 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.240322 [debug] [MainThread]: On master: Close
+[0m13:11:23.240322 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:11:23.240322 [info ] [MainThread]: 
+[0m13:11:23.240322 [debug] [Thread-1 (]: Began running node model.postgres_dev.icd_codes_data
+[0m13:11:23.240322 [debug] [Thread-2 (]: Began running node model.postgres_dev.us_healthcare_claims_data
+[0m13:11:23.240322 [info ] [Thread-1 (]: 1 of 11 START sql table model public_silver.icd_codes_data ..................... [RUN]
+[0m13:11:23.240322 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.postgres_dev.icd_codes_data'
+[0m13:11:23.240322 [info ] [Thread-2 (]: 2 of 11 START sql table model public_silver.us_healthcare_claims_data .......... [RUN]
+[0m13:11:23.240322 [debug] [Thread-1 (]: Began compiling node model.postgres_dev.icd_codes_data
+[0m13:11:23.240322 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.postgres_dev.us_healthcare_claims_data'
+[0m13:11:23.240322 [debug] [Thread-1 (]: Writing injected SQL for node "model.postgres_dev.icd_codes_data"
+[0m13:11:23.240322 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.us_healthcare_claims_data
+[0m13:11:23.256946 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.257784 [debug] [Thread-1 (]: Timing info for model.postgres_dev.icd_codes_data (compile): 13:11:23.240322 => 13:11:23.257784
+[0m13:11:23.258794 [debug] [Thread-2 (]: Timing info for model.postgres_dev.us_healthcare_claims_data (compile): 13:11:23.240322 => 13:11:23.258794
+[0m13:11:23.258794 [debug] [Thread-1 (]: Began executing node model.postgres_dev.icd_codes_data
+[0m13:11:23.259975 [debug] [Thread-2 (]: Began executing node model.postgres_dev.us_healthcare_claims_data
+[0m13:11:23.326314 [debug] [Thread-1 (]: Writing runtime sql for node "model.postgres_dev.icd_codes_data"
+[0m13:11:23.326314 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.340432 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:11:23.341428 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: BEGIN
+[0m13:11:23.341428 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:11:23.342428 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.342428 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: BEGIN
+[0m13:11:23.343432 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:11:23.355428 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.355428 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.356431 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+ 
+with us_healthcare_claims AS (
+	SELECT *
+	FROM 
+		"bootcamp_project"."public"."us_healthcare_claims"
+),
+source_data AS (
+ 
+    select claim as claim_id, member_id, name, address, email, 
+	case when gender NOT IN ('Male', 'Female') then 'Others' else gender end as gender,
+	date(date_of_birth) AS date_of_birth,
+	COALESCE(diagnosis_1, diagnosis_2, diagnosis_3) AS diagnosis_1,
+    	CASE 
+        	WHEN diagnosis_1 IS NOT NULL THEN COALESCE(diagnosis_2, diagnosis_3)
+        	ELSE CASE WHEN diagnosis_2 IS NOT NULL THEN diagnosis_3
+            		ELSE NULL 
+        		END 
+    	END AS diagnosis_2,
+    	CASE 
+        	WHEN diagnosis_1 IS NOT NULL AND diagnosis_2 IS NOT NULL THEN diagnosis_3
+        	ELSE NULL 
+    	END AS diagnosis_3,
+	allowed_amount::varchar AS allowed_amount,
+    paid_amount::varchar AS paid_amount,
+	enrolled_date,
+	claimed_date,
+	paid_date,
+	created_date
+	
+	from 
+		us_healthcare_claims
+)
+ 
+select *
+from source_data
+  );
+  
+[0m13:11:23.367428 [debug] [Thread-2 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:11:23.372444 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.372444 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_silver"."us_healthcare_claims_data" rename to "us_healthcare_claims_data__dbt_backup"
+[0m13:11:23.373872 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.374874 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.376889 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.376889 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:11:23.377874 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_tmp" rename to "us_healthcare_claims_data"
+[0m13:11:23.377874 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."icd_codes_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with source_data as (
+ 
+    select category_code, diagnosis_code, full_code, full_description, category_title
+	from "bootcamp_project"."public"."icd_codes"
+ 
+)
+ 
+select *
+from source_data
+  );
+  
+[0m13:11:23.378874 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.392520 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: COMMIT
+[0m13:11:23.392520 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.392520 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: COMMIT
+[0m13:11:23.414770 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.414770 [debug] [Thread-2 (]: Applying DROP to: "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_backup"
+[0m13:11:23.414770 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.us_healthcare_claims_data"
+[0m13:11:23.414770 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.us_healthcare_claims_data"} */
+drop table if exists "bootcamp_project"."public_silver"."us_healthcare_claims_data__dbt_backup" cascade
+[0m13:11:23.435407 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.435407 [debug] [Thread-2 (]: Timing info for model.postgres_dev.us_healthcare_claims_data (execute): 13:11:23.326314 => 13:11:23.435407
+[0m13:11:23.435407 [debug] [Thread-2 (]: On model.postgres_dev.us_healthcare_claims_data: Close
+[0m13:11:23.435407 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C96EEBF50>]}
+[0m13:11:23.451057 [info ] [Thread-2 (]: 2 of 11 OK created sql table model public_silver.us_healthcare_claims_data ..... [[32mSELECT 1000[0m in 0.20s]
+[0m13:11:23.451057 [debug] [Thread-2 (]: Finished running node model.postgres_dev.us_healthcare_claims_data
+[0m13:11:23.454604 [debug] [Thread-4 (]: Began running node model.postgres_dev.dim_date
+[0m13:11:23.454604 [debug] [Thread-3 (]: Began running node model.postgres_dev.dim_member
+[0m13:11:23.454604 [debug] [Thread-2 (]: Began running node model.postgres_dev.fact_claims
+[0m13:11:23.455639 [info ] [Thread-4 (]: 3 of 11 START sql table model public_silver.dim_date ........................... [RUN]
+[0m13:11:23.456607 [info ] [Thread-3 (]: 4 of 11 START sql table model public_silver.dim_member ......................... [RUN]
+[0m13:11:23.457117 [info ] [Thread-2 (]: 5 of 11 START sql table model public_silver.fact_claims ........................ [RUN]
+[0m13:11:23.457961 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.postgres_dev.dim_date'
+[0m13:11:23.457961 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.postgres_dev.dim_member'
+[0m13:11:23.457961 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.postgres_dev.us_healthcare_claims_data, now model.postgres_dev.fact_claims)
+[0m13:11:23.457961 [debug] [Thread-4 (]: Began compiling node model.postgres_dev.dim_date
+[0m13:11:23.457961 [debug] [Thread-3 (]: Began compiling node model.postgres_dev.dim_member
+[0m13:11:23.457961 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.fact_claims
+[0m13:11:23.457961 [debug] [Thread-4 (]: Writing injected SQL for node "model.postgres_dev.dim_date"
+[0m13:11:23.457961 [debug] [Thread-3 (]: Writing injected SQL for node "model.postgres_dev.dim_member"
+[0m13:11:23.467966 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.fact_claims"
+[0m13:11:23.467966 [debug] [Thread-4 (]: Timing info for model.postgres_dev.dim_date (compile): 13:11:23.457961 => 13:11:23.467966
+[0m13:11:23.467966 [debug] [Thread-2 (]: Timing info for model.postgres_dev.fact_claims (compile): 13:11:23.457961 => 13:11:23.467966
+[0m13:11:23.467966 [debug] [Thread-3 (]: Timing info for model.postgres_dev.dim_member (compile): 13:11:23.457961 => 13:11:23.467966
+[0m13:11:23.467966 [debug] [Thread-4 (]: Began executing node model.postgres_dev.dim_date
+[0m13:11:23.467966 [debug] [Thread-2 (]: Began executing node model.postgres_dev.fact_claims
+[0m13:11:23.467966 [debug] [Thread-3 (]: Began executing node model.postgres_dev.dim_member
+[0m13:11:23.477378 [debug] [Thread-4 (]: Writing runtime sql for node "model.postgres_dev.dim_date"
+[0m13:11:23.480759 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.fact_claims"
+[0m13:11:23.480759 [debug] [Thread-1 (]: SQL status: SELECT 71704 in 0.0 seconds
+[0m13:11:23.486287 [debug] [Thread-3 (]: Writing runtime sql for node "model.postgres_dev.dim_member"
+[0m13:11:23.486287 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:11:23.486287 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:11:23.486287 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:11:23.486287 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:11:23.491075 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: BEGIN
+[0m13:11:23.491688 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: BEGIN
+[0m13:11:23.492693 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+alter table "bootcamp_project"."public_silver"."icd_codes_data" rename to "icd_codes_data__dbt_backup"
+[0m13:11:23.492693 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: BEGIN
+[0m13:11:23.493690 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:11:23.494694 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:11:23.494694 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:11:23.496228 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.496228 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:11:23.496228 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+alter table "bootcamp_project"."public_silver"."icd_codes_data__dbt_tmp" rename to "icd_codes_data"
+[0m13:11:23.496228 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.507953 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: COMMIT
+[0m13:11:23.508953 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:11:23.509956 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: COMMIT
+[0m13:11:23.512888 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.512888 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.512888 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:11:23.512888 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:11:23.512888 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.fact_claims"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."fact_claims__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with us_healthcare_claims_data AS (
+  SELECT *
+  FROM
+    "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+
+),
+ fact_claims AS (
+SELECT
+  claim_id,
+  member_id as member_key,
+  diagnosis_1 as diagnosis_1_key,
+  diagnosis_2 as diagnosis_2_key,
+  diagnosis_3 as diagnosis_3_key,
+  CAST(REGEXP_REPLACE(allowed_amount, '[$,]', '', 'g') AS numeric) AS allowed_amount,
+  CAST(REGEXP_REPLACE(paid_amount, '[$,]', '', 'g') AS numeric) AS paid_amount,
+  date(enrolled_date) as enrolled_date_key, 
+  date(claimed_date) as claimed_date_key,
+  date(paid_date) as paid_date_key
+
+FROM
+  us_healthcare_claims_data
+)
+
+SELECT * 
+FROM fact_claims
+  );
+  
+[0m13:11:23.512888 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."dim_date__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with us_healthcare_claims_data AS (
+    SELECT * 
+    FROM "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+),
+dates_data AS (
+    SELECT
+        DISTINCT DATE(dates) as date_key,
+        EXTRACT(DAY FROM dates) as day_of_month,
+        EXTRACT(MONTH FROM dates) as month,
+        EXTRACT(YEAR FROM dates) as year,
+        EXTRACT(QUARTER FROM dates) as quarter,
+        EXTRACT(DOW FROM dates) as day_of_week,
+        EXTRACT(DOY FROM dates) as day_of_year,
+        EXTRACT(WEEK FROM dates) as week_of_year,
+        CASE WHEN EXTRACT(ISODOW FROM dates) IN (6, 7) THEN 1 ELSE 0 END as is_weekend
+    FROM (
+        SELECT enrolled_date as dates FROM us_healthcare_claims_data 
+        UNION
+        SELECT claimed_date as dates FROM us_healthcare_claims_data 
+        UNION
+        SELECT paid_date as dates FROM us_healthcare_claims_data 
+        UNION
+        SELECT created_date as dates FROM us_healthcare_claims_data 
+    ) AS all_dates
+    ORDER BY date_key
+)
+
+SELECT * 
+FROM dates_data
+  );
+  
+[0m13:11:23.512888 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.512888 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:11:23.512888 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."dim_member__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with us_healthcare_claims_data AS (
+  Select * 
+  FROM
+  "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+),
+member_details AS (
+  SELECT
+    DISTINCT member_id AS member_key,
+    name,
+    address,
+    email,
+    gender
+  FROM
+    us_healthcare_claims_data
+)
+
+SELECT *
+FROM member_details
+  );
+  
+[0m13:11:23.525482 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.541441 [debug] [Thread-1 (]: Applying DROP to: "bootcamp_project"."public_silver"."icd_codes_data__dbt_backup"
+[0m13:11:23.542441 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.icd_codes_data"
+[0m13:11:23.543442 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.icd_codes_data"} */
+drop table if exists "bootcamp_project"."public_silver"."icd_codes_data__dbt_backup" cascade
+[0m13:11:23.548437 [debug] [Thread-3 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:11:23.552439 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:11:23.553439 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.553439 [debug] [Thread-4 (]: SQL status: SELECT 118 in 0.0 seconds
+[0m13:11:23.553439 [debug] [Thread-2 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:11:23.554444 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+alter table "bootcamp_project"."public_silver"."dim_member" rename to "dim_member__dbt_backup"
+[0m13:11:23.555439 [debug] [Thread-1 (]: Timing info for model.postgres_dev.icd_codes_data (execute): 13:11:23.260402 => 13:11:23.555439
+[0m13:11:23.557438 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:11:23.560438 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:11:23.561438 [debug] [Thread-1 (]: On model.postgres_dev.icd_codes_data: Close
+[0m13:11:23.561438 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+alter table "bootcamp_project"."public_silver"."dim_date" rename to "dim_date__dbt_backup"
+[0m13:11:23.562436 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.fact_claims"} */
+alter table "bootcamp_project"."public_silver"."fact_claims" rename to "fact_claims__dbt_backup"
+[0m13:11:23.562436 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.563436 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C973D3D10>]}
+[0m13:11:23.567436 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:11:23.567436 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.567436 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.568436 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+alter table "bootcamp_project"."public_silver"."dim_member__dbt_tmp" rename to "dim_member"
+[0m13:11:23.568436 [info ] [Thread-1 (]: 1 of 11 OK created sql table model public_silver.icd_codes_data ................ [[32mSELECT 71704[0m in 0.32s]
+[0m13:11:23.573563 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:11:23.573563 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:11:23.573563 [debug] [Thread-1 (]: Finished running node model.postgres_dev.icd_codes_data
+[0m13:11:23.573563 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.fact_claims"} */
+alter table "bootcamp_project"."public_silver"."fact_claims__dbt_tmp" rename to "fact_claims"
+[0m13:11:23.573563 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+alter table "bootcamp_project"."public_silver"."dim_date__dbt_tmp" rename to "dim_date"
+[0m13:11:23.573563 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.573563 [debug] [Thread-1 (]: Began running node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:11:23.573563 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: COMMIT
+[0m13:11:23.573563 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.573563 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.573563 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:11:23.573563 [info ] [Thread-1 (]: 6 of 11 START sql table model public_gold.final_us_healthcare_claims_data ...... [RUN]
+[0m13:11:23.573563 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: COMMIT
+[0m13:11:23.573563 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: COMMIT
+[0m13:11:23.573563 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: COMMIT
+[0m13:11:23.573563 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.postgres_dev.icd_codes_data, now model.postgres_dev.final_us_healthcare_claims_data)
+[0m13:11:23.573563 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:11:23.573563 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:11:23.573563 [debug] [Thread-1 (]: Began compiling node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:11:23.589191 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: COMMIT
+[0m13:11:23.589191 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: COMMIT
+[0m13:11:23.592000 [debug] [Thread-1 (]: Writing injected SQL for node "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.592997 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.593666 [debug] [Thread-3 (]: Applying DROP to: "bootcamp_project"."public_silver"."dim_member__dbt_backup"
+[0m13:11:23.593666 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.593666 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.593666 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_member"
+[0m13:11:23.593666 [debug] [Thread-1 (]: Timing info for model.postgres_dev.final_us_healthcare_claims_data (compile): 13:11:23.590337 => 13:11:23.593666
+[0m13:11:23.593666 [debug] [Thread-2 (]: Applying DROP to: "bootcamp_project"."public_silver"."fact_claims__dbt_backup"
+[0m13:11:23.593666 [debug] [Thread-4 (]: Applying DROP to: "bootcamp_project"."public_silver"."dim_date__dbt_backup"
+[0m13:11:23.593666 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_member"} */
+drop table if exists "bootcamp_project"."public_silver"."dim_member__dbt_backup" cascade
+[0m13:11:23.593666 [debug] [Thread-1 (]: Began executing node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:11:23.593666 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.fact_claims"
+[0m13:11:23.593666 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.dim_date"
+[0m13:11:23.610274 [debug] [Thread-1 (]: Writing runtime sql for node "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.610274 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.fact_claims"} */
+drop table if exists "bootcamp_project"."public_silver"."fact_claims__dbt_backup" cascade
+[0m13:11:23.610274 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.610274 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_date"} */
+drop table if exists "bootcamp_project"."public_silver"."dim_date__dbt_backup" cascade
+[0m13:11:23.612787 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.612787 [debug] [Thread-3 (]: Timing info for model.postgres_dev.dim_member (execute): 13:11:23.480759 => 13:11:23.612787
+[0m13:11:23.612787 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: BEGIN
+[0m13:11:23.612787 [debug] [Thread-3 (]: On model.postgres_dev.dim_member: Close
+[0m13:11:23.612787 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:11:23.612787 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C96FD0150>]}
+[0m13:11:23.612787 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.612787 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.612787 [info ] [Thread-3 (]: 4 of 11 OK created sql table model public_silver.dim_member .................... [[32mSELECT 1000[0m in 0.15s]
+[0m13:11:23.612787 [debug] [Thread-2 (]: Timing info for model.postgres_dev.fact_claims (execute): 13:11:23.477378 => 13:11:23.612787
+[0m13:11:23.612787 [debug] [Thread-4 (]: Timing info for model.postgres_dev.dim_date (execute): 13:11:23.467966 => 13:11:23.612787
+[0m13:11:23.612787 [debug] [Thread-3 (]: Finished running node model.postgres_dev.dim_member
+[0m13:11:23.612787 [debug] [Thread-2 (]: On model.postgres_dev.fact_claims: Close
+[0m13:11:23.612787 [debug] [Thread-4 (]: On model.postgres_dev.dim_date: Close
+[0m13:11:23.623562 [debug] [Thread-3 (]: Began running node model.postgres_dev.dim_diagnosis
+[0m13:11:23.625562 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C9756E090>]}
+[0m13:11:23.626561 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C9756D910>]}
+[0m13:11:23.627567 [info ] [Thread-3 (]: 7 of 11 START sql table model public_silver.dim_diagnosis ...................... [RUN]
+[0m13:11:23.628563 [info ] [Thread-2 (]: 5 of 11 OK created sql table model public_silver.fact_claims ................... [[32mSELECT 1000[0m in 0.17s]
+[0m13:11:23.630562 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.630907 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.postgres_dev.dim_member, now model.postgres_dev.dim_diagnosis)
+[0m13:11:23.629561 [info ] [Thread-4 (]: 3 of 11 OK created sql table model public_silver.dim_date ...................... [[32mSELECT 118[0m in 0.17s]
+[0m13:11:23.630907 [debug] [Thread-2 (]: Finished running node model.postgres_dev.fact_claims
+[0m13:11:23.630907 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.630907 [debug] [Thread-3 (]: Began compiling node model.postgres_dev.dim_diagnosis
+[0m13:11:23.630907 [debug] [Thread-4 (]: Finished running node model.postgres_dev.dim_date
+[0m13:11:23.630907 [debug] [Thread-2 (]: Began running node model.postgres_dev.total_allowed_amount
+[0m13:11:23.630907 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+ 
+with source_data as (
+ 
+    select
+	claim_id, member_id, name, address, email, 
+	gender,
+	date(date_of_birth) AS date_of_birth,
+	diagnosis_1,
+    diagnosis_2,
+    diagnosis_3,
+	allowed_amount,
+    paid_amount,
+	date(enrolled_date) as enrolled_date,
+	date(claimed_date) as claimed_date,
+	date(paid_date) as paid_date,
+	date(created_date) as created_date
+	
+from "bootcamp_project"."public_silver"."us_healthcare_claims_data"
+ 
+)
+ 
+select *
+from source_data
+  );
+  
+[0m13:11:23.630907 [debug] [Thread-3 (]: Writing injected SQL for node "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.630907 [debug] [Thread-4 (]: Began running node model.postgres_dev.total_paid_amount
+[0m13:11:23.630907 [info ] [Thread-2 (]: 8 of 11 START sql table model public_gold.total_allowed_amount ................. [RUN]
+[0m13:11:23.641180 [debug] [Thread-3 (]: Timing info for model.postgres_dev.dim_diagnosis (compile): 13:11:23.630907 => 13:11:23.630907
+[0m13:11:23.630907 [info ] [Thread-4 (]: 9 of 11 START sql table model public_gold.total_paid_amount .................... [RUN]
+[0m13:11:23.642183 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.postgres_dev.fact_claims, now model.postgres_dev.total_allowed_amount)
+[0m13:11:23.642183 [debug] [Thread-3 (]: Began executing node model.postgres_dev.dim_diagnosis
+[0m13:11:23.643183 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.postgres_dev.dim_date, now model.postgres_dev.total_paid_amount)
+[0m13:11:23.644181 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.total_allowed_amount
+[0m13:11:23.645724 [debug] [Thread-3 (]: Writing runtime sql for node "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.645724 [debug] [Thread-1 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m13:11:23.645724 [debug] [Thread-4 (]: Began compiling node model.postgres_dev.total_paid_amount
+[0m13:11:23.645724 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.645724 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.645724 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.659837 [debug] [Thread-4 (]: Writing injected SQL for node "model.postgres_dev.total_paid_amount"
+[0m13:11:23.660908 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: BEGIN
+[0m13:11:23.662206 [debug] [Thread-2 (]: Timing info for model.postgres_dev.total_allowed_amount (compile): 13:11:23.645724 => 13:11:23.661615
+[0m13:11:23.662357 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_gold"."final_us_healthcare_claims_data" rename to "final_us_healthcare_claims_data__dbt_backup"
+[0m13:11:23.663400 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:11:23.663949 [debug] [Thread-4 (]: Timing info for model.postgres_dev.total_paid_amount (compile): 13:11:23.645724 => 13:11:23.663949
+[0m13:11:23.665011 [debug] [Thread-2 (]: Began executing node model.postgres_dev.total_allowed_amount
+[0m13:11:23.666648 [debug] [Thread-4 (]: Began executing node model.postgres_dev.total_paid_amount
+[0m13:11:23.668200 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.668200 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.668200 [debug] [Thread-4 (]: Writing runtime sql for node "model.postgres_dev.total_paid_amount"
+[0m13:11:23.675425 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.676426 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.677424 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+alter table "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_tmp" rename to "final_us_healthcare_claims_data"
+[0m13:11:23.678423 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.total_paid_amount"
+[0m13:11:23.678423 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: BEGIN
+[0m13:11:23.679227 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: BEGIN
+[0m13:11:23.679227 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:11:23.679227 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:11:23.679227 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.679227 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: COMMIT
+[0m13:11:23.679227 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.679227 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: COMMIT
+[0m13:11:23.690291 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.693919 [debug] [Thread-1 (]: Applying DROP to: "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_backup"
+[0m13:11:23.693919 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.final_us_healthcare_claims_data"
+[0m13:11:23.693919 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.final_us_healthcare_claims_data"} */
+drop table if exists "bootcamp_project"."public_gold"."final_us_healthcare_claims_data__dbt_backup" cascade
+[0m13:11:23.693919 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.693919 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.693919 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_silver"."dim_diagnosis__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/dim_diagnosis.sql
+
+
+
+WITH icd_codes AS (
+  select *
+  from "bootcamp_project"."public_silver"."icd_codes_data"
+)
+
+SELECT
+  full_code AS diagnosis_key,
+  category_code,
+  diagnosis_code,
+  full_description,
+  category_title
+FROM
+  icd_codes
+  );
+  
+[0m13:11:23.693919 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.693919 [debug] [Thread-1 (]: Timing info for model.postgres_dev.final_us_healthcare_claims_data (execute): 13:11:23.593666 => 13:11:23.693919
+[0m13:11:23.693919 [debug] [Thread-1 (]: On model.postgres_dev.final_us_healthcare_claims_data: Close
+[0m13:11:23.693919 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C973A7F90>]}
+[0m13:11:23.693919 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.693919 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.693919 [info ] [Thread-1 (]: 6 of 11 OK created sql table model public_gold.final_us_healthcare_claims_data . [[32mSELECT 1000[0m in 0.12s]
+[0m13:11:23.693919 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.693919 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_allowed_amount"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_gold"."total_allowed_amount__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH fact_claims AS (
+    SELECT 
+        *
+    FROM 
+        "bootcamp_project"."public_silver"."fact_claims"
+),
+source_data AS (
+    SELECT 
+        sum(allowed_amount) AS total_allowed_amount
+    FROM 
+        fact_claims
+)
+ 
+SELECT *
+FROM source_data
+  );
+  
+[0m13:11:23.693919 [debug] [Thread-1 (]: Finished running node model.postgres_dev.final_us_healthcare_claims_data
+[0m13:11:23.693919 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.total_paid_amount"
+[0m13:11:23.693919 [debug] [Thread-1 (]: Began running node model.postgres_dev.total_paid_amount_by_day
+[0m13:11:23.709622 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_gold"."total_paid_amount__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH fact_claims AS (
+    SELECT 
+        *
+    FROM 
+        "bootcamp_project"."public_silver"."fact_claims"
+), 
+source_data AS (
+    SELECT 
+        sum(paid_amount) AS total_paid_amount
+    FROM 
+        fact_claims
+)
+ 
+SELECT *
+FROM source_data
+  );
+  
+[0m13:11:23.710135 [info ] [Thread-1 (]: 10 of 11 START sql table model public_gold.total_paid_amount_by_day ............ [RUN]
+[0m13:11:23.710135 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.postgres_dev.final_us_healthcare_claims_data, now model.postgres_dev.total_paid_amount_by_day)
+[0m13:11:23.710135 [debug] [Thread-1 (]: Began compiling node model.postgres_dev.total_paid_amount_by_day
+[0m13:11:23.713950 [debug] [Thread-1 (]: Writing injected SQL for node "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.713950 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:11:23.713950 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.713950 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:11:23.713950 [debug] [Thread-1 (]: Timing info for model.postgres_dev.total_paid_amount_by_day (compile): 13:11:23.710135 => 13:11:23.713950
+[0m13:11:23.713950 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_allowed_amount"} */
+alter table "bootcamp_project"."public_gold"."total_allowed_amount" rename to "total_allowed_amount__dbt_backup"
+[0m13:11:23.724607 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.total_paid_amount"
+[0m13:11:23.725607 [debug] [Thread-1 (]: Began executing node model.postgres_dev.total_paid_amount_by_day
+[0m13:11:23.726608 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount"} */
+alter table "bootcamp_project"."public_gold"."total_paid_amount" rename to "total_paid_amount__dbt_backup"
+[0m13:11:23.728801 [debug] [Thread-1 (]: Writing runtime sql for node "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.728801 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.736580 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.736580 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.736580 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.736580 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_allowed_amount"} */
+alter table "bootcamp_project"."public_gold"."total_allowed_amount__dbt_tmp" rename to "total_allowed_amount"
+[0m13:11:23.736580 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: BEGIN
+[0m13:11:23.742333 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.total_paid_amount"
+[0m13:11:23.743334 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:11:23.744333 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount"} */
+alter table "bootcamp_project"."public_gold"."total_paid_amount__dbt_tmp" rename to "total_paid_amount"
+[0m13:11:23.745715 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.745715 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: COMMIT
+[0m13:11:23.745715 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.745715 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.745715 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: COMMIT
+[0m13:11:23.745715 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: COMMIT
+[0m13:11:23.745715 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.total_paid_amount"
+[0m13:11:23.745715 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: COMMIT
+[0m13:11:23.759866 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.771492 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.772004 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount_by_day"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_gold"."total_paid_amount_by_day__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH source_data AS ( 
+    SELECT * 
+    FROM 
+         "bootcamp_project"."public_silver"."fact_claims"
+), 
+dim_day AS (
+    SELECT
+        date_key,
+        day_of_month
+    FROM
+        "bootcamp_project"."public_silver"."dim_date"
+),
+calculate AS (
+    SELECT 
+        d.day_of_month AS paid_by_day,
+        SUM(sd.paid_amount) AS total_paid_amount
+    FROM 
+        source_data sd
+    LEFT JOIN
+        dim_day d ON sd.paid_date_key = d.date_key
+    WHERE
+        sd.paid_date_key IS NOT NULL AND sd.paid_amount IS NOT NULL
+    GROUP BY 
+        d.day_of_month 
+    ORDER BY
+        d.day_of_month 
+)
+ 
+SELECT *
+FROM calculate
+  );
+  
+[0m13:11:23.775785 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.775785 [debug] [Thread-2 (]: Applying DROP to: "bootcamp_project"."public_gold"."total_allowed_amount__dbt_backup"
+[0m13:11:23.775785 [debug] [Thread-4 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.775785 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.total_allowed_amount"
+[0m13:11:23.775785 [debug] [Thread-4 (]: Applying DROP to: "bootcamp_project"."public_gold"."total_paid_amount__dbt_backup"
+[0m13:11:23.775785 [debug] [Thread-1 (]: SQL status: SELECT 30 in 0.0 seconds
+[0m13:11:23.790484 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_allowed_amount"} */
+drop table if exists "bootcamp_project"."public_gold"."total_allowed_amount__dbt_backup" cascade
+[0m13:11:23.791362 [debug] [Thread-4 (]: Using postgres connection "model.postgres_dev.total_paid_amount"
+[0m13:11:23.794361 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.795361 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount"} */
+drop table if exists "bootcamp_project"."public_gold"."total_paid_amount__dbt_backup" cascade
+[0m13:11:23.795361 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount_by_day"} */
+alter table "bootcamp_project"."public_gold"."total_paid_amount_by_day" rename to "total_paid_amount_by_day__dbt_backup"
+[0m13:11:23.798361 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.800381 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.801359 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount_by_day"} */
+alter table "bootcamp_project"."public_gold"."total_paid_amount_by_day__dbt_tmp" rename to "total_paid_amount_by_day"
+[0m13:11:23.819262 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.819262 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.821263 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: COMMIT
+[0m13:11:23.823264 [debug] [Thread-2 (]: Timing info for model.postgres_dev.total_allowed_amount (execute): 13:11:23.667174 => 13:11:23.822262
+[0m13:11:23.823264 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.823264 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.824337 [debug] [Thread-3 (]: SQL status: SELECT 71704 in 0.0 seconds
+[0m13:11:23.824337 [debug] [Thread-2 (]: On model.postgres_dev.total_allowed_amount: Close
+[0m13:11:23.824337 [debug] [Thread-4 (]: Timing info for model.postgres_dev.total_paid_amount (execute): 13:11:23.668200 => 13:11:23.824337
+[0m13:11:23.824337 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: COMMIT
+[0m13:11:23.824337 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.824337 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C971E82D0>]}
+[0m13:11:23.824337 [debug] [Thread-4 (]: On model.postgres_dev.total_paid_amount: Close
+[0m13:11:23.824337 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+alter table "bootcamp_project"."public_silver"."dim_diagnosis" rename to "dim_diagnosis__dbt_backup"
+[0m13:11:23.824337 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C96FC7C10>]}
+[0m13:11:23.824337 [info ] [Thread-2 (]: 8 of 11 OK created sql table model public_gold.total_allowed_amount ............ [[32mSELECT 1[0m in 0.18s]
+[0m13:11:23.824337 [debug] [Thread-2 (]: Finished running node model.postgres_dev.total_allowed_amount
+[0m13:11:23.824337 [info ] [Thread-4 (]: 9 of 11 OK created sql table model public_gold.total_paid_amount ............... [[32mSELECT 1[0m in 0.18s]
+[0m13:11:23.824337 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.824337 [debug] [Thread-4 (]: Finished running node model.postgres_dev.total_paid_amount
+[0m13:11:23.824337 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.824337 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+alter table "bootcamp_project"."public_silver"."dim_diagnosis__dbt_tmp" rename to "dim_diagnosis"
+[0m13:11:23.839964 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.841891 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: COMMIT
+[0m13:11:23.842898 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.843895 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: COMMIT
+[0m13:11:23.845032 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.845032 [debug] [Thread-1 (]: Applying DROP to: "bootcamp_project"."public_gold"."total_paid_amount_by_day__dbt_backup"
+[0m13:11:23.845032 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.858020 [debug] [Thread-1 (]: Using postgres connection "model.postgres_dev.total_paid_amount_by_day"
+[0m13:11:23.859974 [debug] [Thread-3 (]: Applying DROP to: "bootcamp_project"."public_silver"."dim_diagnosis__dbt_backup"
+[0m13:11:23.859974 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.total_paid_amount_by_day"} */
+drop table if exists "bootcamp_project"."public_gold"."total_paid_amount_by_day__dbt_backup" cascade
+[0m13:11:23.859974 [debug] [Thread-3 (]: Using postgres connection "model.postgres_dev.dim_diagnosis"
+[0m13:11:23.859974 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.dim_diagnosis"} */
+drop table if exists "bootcamp_project"."public_silver"."dim_diagnosis__dbt_backup" cascade
+[0m13:11:23.859974 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.859974 [debug] [Thread-1 (]: Timing info for model.postgres_dev.total_paid_amount_by_day (execute): 13:11:23.726608 => 13:11:23.859974
+[0m13:11:23.859974 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.859974 [debug] [Thread-1 (]: On model.postgres_dev.total_paid_amount_by_day: Close
+[0m13:11:23.859974 [debug] [Thread-3 (]: Timing info for model.postgres_dev.dim_diagnosis (execute): 13:11:23.644181 => 13:11:23.859974
+[0m13:11:23.859974 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C971BBFD0>]}
+[0m13:11:23.859974 [debug] [Thread-3 (]: On model.postgres_dev.dim_diagnosis: Close
+[0m13:11:23.859974 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C97514150>]}
+[0m13:11:23.859974 [info ] [Thread-1 (]: 10 of 11 OK created sql table model public_gold.total_paid_amount_by_day ....... [[32mSELECT 30[0m in 0.15s]
+[0m13:11:23.859974 [debug] [Thread-1 (]: Finished running node model.postgres_dev.total_paid_amount_by_day
+[0m13:11:23.859974 [info ] [Thread-3 (]: 7 of 11 OK created sql table model public_silver.dim_diagnosis ................. [[32mSELECT 71704[0m in 0.23s]
+[0m13:11:23.874540 [debug] [Thread-3 (]: Finished running node model.postgres_dev.dim_diagnosis
+[0m13:11:23.875542 [debug] [Thread-2 (]: Began running node model.postgres_dev.diagnosis_frequency
+[0m13:11:23.876542 [info ] [Thread-2 (]: 11 of 11 START sql table model public_gold.diagnosis_frequency ................. [RUN]
+[0m13:11:23.877541 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.postgres_dev.total_allowed_amount, now model.postgres_dev.diagnosis_frequency)
+[0m13:11:23.877541 [debug] [Thread-2 (]: Began compiling node model.postgres_dev.diagnosis_frequency
+[0m13:11:23.878720 [debug] [Thread-2 (]: Writing injected SQL for node "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.878720 [debug] [Thread-2 (]: Timing info for model.postgres_dev.diagnosis_frequency (compile): 13:11:23.878540 => 13:11:23.878720
+[0m13:11:23.878720 [debug] [Thread-2 (]: Began executing node model.postgres_dev.diagnosis_frequency
+[0m13:11:23.878720 [debug] [Thread-2 (]: Writing runtime sql for node "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.878720 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.878720 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: BEGIN
+[0m13:11:23.878720 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m13:11:23.896318 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:23.896318 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.896318 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.diagnosis_frequency"} */
+
+  
+    
+
+  create  table "bootcamp_project"."public_gold"."diagnosis_frequency__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/diagnosis_analysis.sql
+
+
+
+WITH fact_claims AS (
+  SELECT
+    diagnosis_1_key,
+    diagnosis_2_key,
+    diagnosis_3_key
+  FROM "bootcamp_project"."public_silver"."fact_claims"
+),
+dim_diagnosis AS (
+  SELECT *
+  FROM "bootcamp_project"."public_silver"."dim_diagnosis"
+),
+analysis AS (
+    SELECT
+    diagnosis_key,
+    category_title
+    FROM fact_claims f
+    LEFT JOIN dim_diagnosis d1 ON f.diagnosis_1_key = d1.diagnosis_key
+    UNION ALL
+    SELECT
+    diagnosis_key,
+    category_title
+    FROM fact_claims f
+    LEFT JOIN dim_diagnosis d2 ON f.diagnosis_2_key = d2.diagnosis_key
+    UNION ALL
+    SELECT
+    diagnosis_key,
+    category_title
+    FROM fact_claims f
+    LEFT JOIN dim_diagnosis d3 ON f.diagnosis_3_key = d3.diagnosis_key
+)
+
+select 
+    diagnosis_key,
+    category_title,
+    count(*) as diagnosis_frequency
+from 
+    analysis
+where
+    category_title is NOT NULL
+group by
+    diagnosis_key,
+    category_title
+order by
+    diagnosis_frequency desc
+  );
+  
+[0m13:11:23.959710 [debug] [Thread-2 (]: SQL status: SELECT 2060 in 0.0 seconds
+[0m13:11:23.959710 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.959710 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.diagnosis_frequency"} */
+alter table "bootcamp_project"."public_gold"."diagnosis_frequency" rename to "diagnosis_frequency__dbt_backup"
+[0m13:11:23.959710 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.959710 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.959710 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.diagnosis_frequency"} */
+alter table "bootcamp_project"."public_gold"."diagnosis_frequency__dbt_tmp" rename to "diagnosis_frequency"
+[0m13:11:23.959710 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:11:23.959710 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: COMMIT
+[0m13:11:23.959710 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.959710 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: COMMIT
+[0m13:11:23.976580 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:23.978583 [debug] [Thread-2 (]: Applying DROP to: "bootcamp_project"."public_gold"."diagnosis_frequency__dbt_backup"
+[0m13:11:23.979583 [debug] [Thread-2 (]: Using postgres connection "model.postgres_dev.diagnosis_frequency"
+[0m13:11:23.979583 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "postgres_dev", "target_name": "dev", "node_id": "model.postgres_dev.diagnosis_frequency"} */
+drop table if exists "bootcamp_project"."public_gold"."diagnosis_frequency__dbt_backup" cascade
+[0m13:11:23.983581 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:11:23.984584 [debug] [Thread-2 (]: Timing info for model.postgres_dev.diagnosis_frequency (execute): 13:11:23.878720 => 13:11:23.984584
+[0m13:11:23.985583 [debug] [Thread-2 (]: On model.postgres_dev.diagnosis_frequency: Close
+[0m13:11:23.985583 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '527ba48a-d06b-4d6b-a2f4-423983c5bcec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C976CC090>]}
+[0m13:11:23.986587 [info ] [Thread-2 (]: 11 of 11 OK created sql table model public_gold.diagnosis_frequency ............ [[32mSELECT 2060[0m in 0.11s]
+[0m13:11:23.987583 [debug] [Thread-2 (]: Finished running node model.postgres_dev.diagnosis_frequency
+[0m13:11:23.989605 [debug] [MainThread]: Using postgres connection "master"
+[0m13:11:23.990301 [debug] [MainThread]: On master: BEGIN
+[0m13:11:23.990301 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:11:24.013595 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:11:24.013595 [debug] [MainThread]: On master: COMMIT
+[0m13:11:24.013595 [debug] [MainThread]: Using postgres connection "master"
+[0m13:11:24.013595 [debug] [MainThread]: On master: COMMIT
+[0m13:11:24.013595 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:11:24.013595 [debug] [MainThread]: On master: Close
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'list_bootcamp_project' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'list_bootcamp_project' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'list_bootcamp_project_public_gold' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'list_bootcamp_project_public_silver' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'model.postgres_dev.total_paid_amount_by_day' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'model.postgres_dev.diagnosis_frequency' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'model.postgres_dev.total_paid_amount' was properly closed.
+[0m13:11:24.013595 [debug] [MainThread]: Connection 'model.postgres_dev.dim_diagnosis' was properly closed.
+[0m13:11:24.013595 [info ] [MainThread]: 
+[0m13:11:24.013595 [info ] [MainThread]: Finished running 11 table models in 0 hours 0 minutes and 0.92 seconds (0.92s).
+[0m13:11:24.013595 [debug] [MainThread]: Command end result
+[0m13:11:24.027128 [info ] [MainThread]: 
+[0m13:11:24.027128 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:11:24.027128 [info ] [MainThread]: 
+[0m13:11:24.027128 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[0m13:11:24.027128 [debug] [MainThread]: Command `dbt run` succeeded at 13:11:24.027128 after 1.45 seconds
+[0m13:11:24.027128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C9036C550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C9036C4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011C900DE350>]}
+[0m13:11:24.027128 [debug] [MainThread]: Flushing usage events
