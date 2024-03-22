@@ -1,0 +1,203 @@
+version: 2
+
+models:
+  - name: us_healthcare_claims_data
+    description: Table containing records of healthcare claims processed within the United States
+    columns:
+      - name: claim_id
+        description: unique identifier for claims
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: unique identifier for member
+        tests:
+          - unique
+          - not_null
+
+      - name: gender
+        description: gender-type of patients
+        tests:
+          - accepted_values:
+              values: ['Male','Female','Others']
+
+  - name: icd_codes_data
+    description: International Classification of Diseases (ICD) codes and descriptions for medical diagnoses and procedures. 
+    columns:
+      - name: full_code
+        description: unique identifier for disease
+        tests:
+          - unique  
+
+  - name: fact_claims
+    description: Detailed information about individual claim transactions in the healthcare system. 
+    columns:
+      - name: claim_id
+        description: Unique identifier for claims
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: claim_id
+
+      - name: member_key
+        description: Unique identifier for member
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: member_id
+
+      - name: diagnosis_1_key
+        description: Primary diagnosis code assigned to the patient's condition as per medical records
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: diagnosis_1
+
+      - name: diagnosis_2_key
+        description: Secondary diagnosis code, if available, indicating additional medical conditions
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: diagnosis_2
+
+      - name: diagnosis_3_key
+        description: Tertiary diagnosis code, if available, representing further medical conditions
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: diagnosis_3
+      
+      - name: allowed_amount
+        description: Approved amount that the insurer is willing to pay
+
+      - name: paid_amount
+        description: Actual amount paid by the insurer towards the settlement of the claim
+
+      - name: enrolled_date_key
+        description: Date when the claim was initiated by the healthcare provider
+        tests:
+          - not_null
+
+      - name: claimed_date_key
+        description: Date when the claim was officially filed with the healthcare payer
+        tests:
+          - not_null
+
+      - name: paid_date_key
+        description: Date when the claim was processed and payment was made by healthcare payer
+
+  - name: dim_diagnosis
+    description: Containing diagnosis codes and related information. 
+    columns:
+      - name: diagnosis_key
+        description: Primary key for unique diagnosis identifiers
+        tests:
+          - relationships:
+              to: ref('icd_codes_data')
+              field: full_code
+      
+      - name: category_code
+        description: Category code for ICD classification.
+        tests:
+          - relationships:
+              to: ref('icd_codes_data')
+              field: category_code
+      
+      - name: diagnosis_code
+        description: Specific diagnosis code.
+        tests:
+          - relationships:
+              to: ref('icd_codes_data')
+              field: diagnosis_code
+      
+      - name: full_description
+        description: Detailed description of the diagnosis.
+        tests:
+          - relationships:
+              to: ref('icd_codes_data')
+              field: full_description
+      
+      - name: category_title
+        description: Category name for ICD classification.
+        tests:
+          - relationships:
+              to: ref('icd_codes_data')
+              field: category_title
+
+  - name: dim_member
+    description: Table storing detailed information about individual members 
+    columns:
+      - name: member_key
+        description: Primary key for dim_member table
+        tests:
+          - unique
+          - not_null
+  
+      - name: name
+        description: Full name 
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: name
+
+      - name: address
+        description: Physical address
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: address
+      
+      - name: email
+        description: Email address
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: email
+
+      - name: gender
+        description: Gender identity 
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: gender
+
+  - name: dim_date
+    description: Table storing date-related attributes.
+    columns:
+      - name: date_key
+        description: Unique identifier representing individual dates
+        test:
+          - date
+
+  - name: total_allowed_amount
+    description: Total amounts allowed by an insurer for settling claims for defined groups of claims
+    columns:
+      - name: total_allowed_amount
+        description: Amount in USD
+        test:
+          - relationships:
+              to: ref('fact_claims')
+
+  - name: total_paid_amount
+    description: Total amount paid by an insurer for settling claims for defined groups of claims
+    columns:
+      - name: paid_amount
+        description: Amount in USD
+        tests:
+          - relationships:
+              to: ref('fact_claims')
+  
+  - name: diagnosis_frequency
+    description: Unique diagnosis keys with category titles and their counts for defined groups of claims
+    columns:
+      - name: diagnosis_key
+        description: FUll diagnosis code
+    
+    columns:
+      - name: category_title
+        description: Category title associated with each diagnosis key
+    
+    columns:
+      - name: diagnosis_frequency
+        description: frequency of a specific diagnosis

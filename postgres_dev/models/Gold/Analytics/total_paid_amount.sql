@@ -1,10 +1,16 @@
 {{ config(materialized='table', schema='gold') }}
 
-WITH source_data AS (
+WITH fact_claims AS (
+    SELECT 
+        *
+    FROM 
+        {{ ref('fact_claims') }}
+), 
+source_data AS (
     SELECT 
         sum(paid_amount) AS total_paid_amount
     FROM 
-        {{ ref('fact_claims') }}
+        fact_claims
 )
  
 SELECT *
