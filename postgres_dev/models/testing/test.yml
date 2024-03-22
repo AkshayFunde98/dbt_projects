@@ -184,9 +184,11 @@ models:
     columns:
       - name: paid_amount
         description: Amount in USD
-        tests:
-          - relationships:
-              to: ref('fact_claims')
+
+  - name: total_paid_amount_by_day
+    description: Total amount paid by an insurer on perticular day of month
+    columns:
+      - name: total_paid_amount
   
   - name: diagnosis_frequency
     description: Unique diagnosis keys with category titles and their counts for defined groups of claims
@@ -194,10 +196,19 @@ models:
       - name: diagnosis_key
         description: FUll diagnosis code
     
-    columns:
       - name: category_title
         description: Category title associated with each diagnosis key
-    
-    columns:
+
       - name: diagnosis_frequency
         description: frequency of a specific diagnosis
+  
+  - name: final_us_healthcare_claims_data
+    description: Table containing records of healthcare claims processed within the United States
+    columns:
+      - name: claim_id
+        description: Unique identifier representing individual claims
+        tests:
+          - relationships:
+              to: ref('us_healthcare_claims_data')
+              field: claim_id
+  

@@ -1,6 +1,11 @@
 {{ config(materialized='table', schema='gold') }}
  
-with source_data as (
+with us_healthcare_claims_data AS (
+	SELECT *
+	FROM 
+		{{ ref('us_healthcare_claims_data') }}
+),
+source_data as (
  
     select
 	claim_id, member_id, name, address, email, 
@@ -16,7 +21,8 @@ with source_data as (
 	date(paid_date) as paid_date,
 	date(created_date) as created_date
 	
-from {{ ref('us_healthcare_claims_data') }}
+from 
+	us_healthcare_claims_data
  
 )
  

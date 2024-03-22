@@ -14,7 +14,7 @@ dim_day AS (
 ),
 calculate AS (
     SELECT 
-        d.day_of_month AS paid_by_day,
+        d.day_of_month AS day_of_month,
         SUM(sd.paid_amount) AS total_paid_amount
     FROM 
         source_data sd
