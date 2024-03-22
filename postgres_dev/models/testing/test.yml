@@ -190,7 +190,7 @@ models:
     columns:
       - name: total_paid_amount
   
-  - name: diagnosis_frequency
+  - name: diagnosis_frequency_by_key
     description: Unique diagnosis keys with category titles and their counts for defined groups of claims
     columns:
       - name: diagnosis_key
@@ -212,3 +212,8 @@ models:
               to: ref('us_healthcare_claims_data')
               field: claim_id
   
+  - name: diagnosis_frequency_by_gender
+    description: Table containing frequency of different diagnoses across different genders
+    columns:
+      - name: diagnosis_frequency
+        description: Frequency of diagnosis for defined groups of claims
