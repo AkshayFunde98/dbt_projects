@@ -1,6 +1,6 @@
 
 
-WITH source_data AS ( 
+WITH fact_claims AS ( 
     SELECT * 
     FROM 
          "bootcamp_project"."public_silver"."fact_claims"
@@ -15,13 +15,13 @@ dim_day AS (
 calculate AS (
     SELECT 
         d.day_of_month AS day_of_month,
-        SUM(sd.paid_amount) AS total_paid_amount
+        SUM(fc.paid_amount) AS total_paid_amount
     FROM 
-        source_data sd
+        fact_claims fc
     LEFT JOIN
-        dim_day d ON sd.paid_date_key = d.date_key
+        dim_day d ON fc.paid_date_key = d.date_key
     WHERE
-        sd.paid_date_key IS NOT NULL AND sd.paid_amount IS NOT NULL
+        fc.paid_date_key IS NOT NULL AND fc.paid_amount IS NOT NULL
     GROUP BY 
         d.day_of_month 
     ORDER BY
