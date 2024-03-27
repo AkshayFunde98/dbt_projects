@@ -70,9 +70,17 @@ models:
       
       - name: allowed_amount
         description: Approved amount that the insurer is willing to pay
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: false
 
       - name: paid_amount
         description: Actual amount paid by the insurer towards the settlement of the claim
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: false
 
       - name: enrolled_date_key
         description: Date when the claim was initiated by the healthcare provider
